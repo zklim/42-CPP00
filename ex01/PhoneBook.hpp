@@ -6,14 +6,16 @@
 /*   By: zhlim <zhlim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 15:01:38 by zhlim             #+#    #+#             */
-/*   Updated: 2023/10/01 17:58:08 by zhlim            ###   ########.fr       */
+/*   Updated: 2023/10/02 01:30:38 by zhlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_H
 # define PHONEBOOK_H
 
-#include "Contact.hpp"
+# include "Contact.hpp"
+# include <iostream>
+# include <iomanip>
 
 class PhoneBook {
 	
@@ -22,8 +24,10 @@ public:
 	PhoneBook();
 	~PhoneBook();
 
-	void	createContact(int i, std::string firstName, std::string lastName, 
-		std::string nickName, std::string phoneNumber, std::string darkestSecret);
+	void	createContact();
+	void	searchContacts();
+	void	printPrompt();
+	void	printHeader();
 
 	Contact	getContact(int i) const;
 	std::string	getFirstName(int i) const;
@@ -35,6 +39,7 @@ public:
 private:
 
 	Contact phoneBook[8];
+	int		index;
 };
 
 #endif
