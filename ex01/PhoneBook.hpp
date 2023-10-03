@@ -6,7 +6,7 @@
 /*   By: zhlim <zhlim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 15:01:38 by zhlim             #+#    #+#             */
-/*   Updated: 2023/10/02 01:30:38 by zhlim            ###   ########.fr       */
+/*   Updated: 2023/10/02 17:53:55 by zhlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,14 @@ public:
 	PhoneBook();
 	~PhoneBook();
 
-	void	createContact();
-	void	searchContacts();
-	void	printPrompt();
-	void	printHeader();
+	void		createContact();
+	void		searchContacts();
+	void		displayContacts();
+	void		displaySingle(int i);
+	static void	printPrompt();
+	static void	printHeader();
 
-	Contact	getContact(int i) const;
+	Contact		getContact(int i) const;
 	std::string	getFirstName(int i) const;
 	std::string getLastName(int i) const;
 	std::string getNickName(int i) const;

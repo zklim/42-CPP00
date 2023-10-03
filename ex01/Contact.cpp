@@ -6,13 +6,13 @@
 /*   By: zhlim <zhlim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 15:01:32 by zhlim             #+#    #+#             */
-/*   Updated: 2023/10/01 18:30:51 by zhlim            ###   ########.fr       */
+/*   Updated: 2023/10/02 17:37:26 by zhlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact() {}
+Contact::Contact() : _isInit(0) {}
 
 Contact::~Contact() {}
 
@@ -23,6 +23,7 @@ void	Contact::setAll(std::string firstName, std::string lastName,
 	this->_nickName = nickName;
 	this->_phoneNumber = phoneNumber;
 	this->_darkestSecret = darkestSecret;
+	this->_isInit = 1;
 }
 
 std::string	Contact::getFirstName() const {
@@ -43,4 +44,8 @@ std::string Contact::getPhoneNumber() const {
 
 std::string Contact::getDarkestSecret() const {
 	return this->_darkestSecret;
+}
+
+int	Contact::isInit() const {
+	return this->_isInit;
 }

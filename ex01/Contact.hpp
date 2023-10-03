@@ -6,7 +6,7 @@
 /*   By: zhlim <zhlim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 15:01:27 by zhlim             #+#    #+#             */
-/*   Updated: 2023/10/01 18:30:32 by zhlim            ###   ########.fr       */
+/*   Updated: 2023/10/02 17:36:53 by zhlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,11 @@ public:
 		std::string getNickName() const;
 		std::string	getPhoneNumber() const;
 		std::string	getDarkestSecret() const;
+		int			isInit() const;
 
 private:
 
+		int			_isInit;
 		std::string _firstName;
 		std::string _lastName;
 		std::string _nickName;
